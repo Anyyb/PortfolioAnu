@@ -5,6 +5,7 @@
 body {
     background: linear-gradient( to bottom right, #011425, #242424); /* lineaarinen gradient taustaväri koko sivulle*/
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*fontti asetuksen sivun teksteille*/
+    width: 100%; /* Käytä 100% näyttöleveydestä */
     height: 100vh; /* Käytä 100% näyttökorkeudesta */
     overflow: hidden;
     color:white; /*fonttien väri*/
@@ -47,7 +48,7 @@ li button { /*valikon listan sisältö ul elementin sisällä*/
 li button:hover { /*aseta hover väri valikolle*/
     background-color: #1F4959;
     color: white;
-}
+  }
 .kuvan-alue {
     width: 20%; /* alueen leveys */
     height:auto; /* pituus auto */
@@ -62,16 +63,6 @@ li button:hover { /*aseta hover väri valikolle*/
     border: 1px solid #5C7C89;
 }
 
-.contact {
-    width: 25%; /* Voit säätää leveyttä tarpeesi mukaan */
-    background-color: transparent; /*tausta läpinäkyväksi */
-    border: 1px solid #5C7C89; 
-    text-decoration:none;
-    padding: 10px;
-    z-index: 999; /* Aseta korkea z-indeksi varmistaaksesi, että tämä on päällimmäisenä */
-    margin-left:2%;
-
-}
 .about {
     width: 45%;
     float:left;
@@ -105,14 +96,22 @@ li button:hover { /*aseta hover väri valikolle*/
     color: white;
     font-family: monospace;
 }
-
+.contact {
+    position: fixed;
+    bottom: 0;
+    width: 18%;
+    padding: 2%;
+    border: 1px solid #5C7C89;
+    margin-left:2% ;
+    z-index: 999; /* Aseta korkea z-indeksi varmistaaksesi, että tämä on päällimmäisenä */
+}
 
 
 /* asetukset pienemille näytöille */
 @media only screen and (max-width: 1000px) {
     body {
         background: linear-gradient( to bottom right, #011425, #242424); /* lineaarinen gradient taustaväri koko sivulle*/
-        width: 100%; /* Käytä 100% näyttöleveydestä */
+
         height: 100%; /* Käytä 100% näyttökorkeudesta */
         display: flex;
         flex-direction: column;
@@ -157,7 +156,7 @@ li button:hover { /*aseta hover väri valikolle*/
         padding: 2%;
         border: 1px solid #5C7C89; /*reunojen väri ja koko*/ 
     }
-    #codesisältö, #designsisältö, #photosisältö {
+    #codesisältö,#designsisältö, #photosisältö {
         width: 80%;
         height: auto;
         margin-top: 2%;
@@ -185,10 +184,11 @@ li button:hover { /*aseta hover väri valikolle*/
         padding: 2%;
         border: 1px solid #5C7C89; 
     }
-    h1, h2 {
+    h1, h2{
         
         font-size: 25pt;
         
     }
 }
+ 
  
