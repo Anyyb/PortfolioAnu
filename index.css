@@ -109,7 +109,7 @@ li button:hover { /*aseta hover väri valikolle*/
 
 
 /* asetukset pienemille näytöille */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1400px) {
     body {
         background: linear-gradient( to bottom right, #011425, #242424); /* lineaarinen gradient taustaväri koko sivulle*/
 
