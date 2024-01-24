@@ -5,26 +5,25 @@
 body {
     background: linear-gradient( to bottom right, #011425, #242424); /* lineaarinen gradient taustaväri koko sivulle*/
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*fontti asetuksen sivun teksteille*/
-    width: 100%; /* Käytä 100% näyttöleveydestä */
     height: 100vh; /* Käytä 100% näyttökorkeudesta */
     overflow: hidden;
     color:white; /*fonttien väri*/
     margin: 2%; /* Lisää marginaali ympärille */
     width: 95%;
 }
-h1, h2{
+h1, h2 {
     font-size: 25pt;
     margin-left:2%;  
 }
-h3{
+h3 {
     font-size: 18pt;
 }
-p{
+p {
     font-size: 13pt;
     line-height: 1.5;
 }
 
-ul{ /*valikko asetukset */
+ul { /*valikko asetukset */
     width: 15%; /*leveys */
     float:right; /* sijainti sivun oikeaan reunaan*/
     margin: 0; /* Poista listan aiheuttamat marginaalit */
@@ -48,7 +47,7 @@ li button { /*valikon listan sisältö ul elementin sisällä*/
 li button:hover { /*aseta hover väri valikolle*/
     background-color: #1F4959;
     color: white;
-  }
+}
 .kuvan-alue {
     width: 20%; /* alueen leveys */
     height:auto; /* pituus auto */
@@ -58,12 +57,12 @@ li button:hover { /*aseta hover väri valikolle*/
 
 }
 
-.kuvan-alue img{ /* kuvan-alue divin kuvan asetukset */
+.kuvan-alue img { /* kuvan-alue divin kuvan asetukset */
     width: 100%; /* leveys parent divin leveydestä 20% */
     border: 1px solid #5C7C89;
 }
 
-.contact{
+.contact {
     width: 25%; /* Voit säätää leveyttä tarpeesi mukaan */
     background-color: transparent; /*tausta läpinäkyväksi */
     border: 1px solid #5C7C89; 
@@ -73,7 +72,7 @@ li button:hover { /*aseta hover väri valikolle*/
     margin-left:2%;
 
 }
-.about{
+.about {
     width: 45%;
     float:left;
     margin-left: 10%;
@@ -81,7 +80,7 @@ li button:hover { /*aseta hover väri valikolle*/
     padding: 2%;
     border: 1px solid #5C7C89; 
 }
-#codesisältö, #designsisältö, #photosisältö{
+#codesisältö, #designsisältö, #photosisältö {
     width: 45%;
     margin-left: 30%;
     height: auto;
@@ -93,7 +92,7 @@ li button:hover { /*aseta hover väri valikolle*/
     width: 40%;
     height: auto;
 }
-#codesisältö img{
+#codesisältö img {
     width: 60%;
     height: auto;
 }
@@ -136,7 +135,7 @@ li button:hover { /*aseta hover väri valikolle*/
         margin-left: 0;
         border: 1px solid #5C7C89;
     }
-    .kuvan-alue img{ /* kuvan-alue divin kuvan asetukset */
+    .kuvan-alue img { /* kuvan-alue divin kuvan asetukset */
         width: 50%;
         margin-top: 2%;
         margin-bottom: 2%;
@@ -147,7 +146,7 @@ li button:hover { /*aseta hover väri valikolle*/
     
     }
 
-    ul{ /*valikko asetukset */
+    ul { /*valikko asetukset */
         width: 80%; /*leveys */
         
     } 
@@ -164,7 +163,7 @@ li button:hover { /*aseta hover väri valikolle*/
         padding: 2%;
         border: 1px solid #5C7C89; /*reunojen väri ja koko*/ 
     }
-    #codesisältö,#designsisältö, #photosisältö {
+    #codesisältö, #designsisältö, #photosisältö {
         width: 80%;
         height: auto;
         margin-top: 2%;
@@ -172,7 +171,7 @@ li button:hover { /*aseta hover väri valikolle*/
         padding: 2%;
         border: 1px solid #5C7C89; 
     }
-    #codesisältö img{
+    #codesisältö img {
         width: 100%;
         height: auto;
     }
@@ -182,7 +181,7 @@ li button:hover { /*aseta hover väri valikolle*/
         background-color: black;
         color: white;
     }
-    .contact{
+    .contact {
         float: left;
         position:inherit;
         width: 80%;
@@ -192,7 +191,7 @@ li button:hover { /*aseta hover väri valikolle*/
         padding: 2%;
         border: 1px solid #5C7C89; 
     }
-    h1, h2{
+    h1, h2 {
         
         font-size: 25pt;
         
