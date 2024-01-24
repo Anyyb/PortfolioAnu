@@ -112,7 +112,6 @@ li button:hover { /*aseta hover väri valikolle*/
 @media only screen and (max-width: 1400px) {
     body {
         background: linear-gradient( to bottom right, #011425, #242424); /* lineaarinen gradient taustaväri koko sivulle*/
-
         height: 100%; /* Käytä 100% näyttökorkeudesta */
         display: flex;
         flex-direction: column;
@@ -189,6 +188,10 @@ li button:hover { /*aseta hover väri valikolle*/
         
         font-size: 25pt;
         
+    }
+    p {
+        color:white;
+        text-decoration: none;
     }
 }
  
