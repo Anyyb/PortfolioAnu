@@ -1,0 +1,201 @@
+@charset "utf-8";
+*{
+    box-sizing: border-box; /* asettaa kaikille HTML elementeille box-sizing arvon border-box*/
+}
+body {
+    background: linear-gradient( to bottom right, #011425, #242424); /* lineaarinen gradient taustaväri koko sivulle*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*fontti asetuksen sivun teksteille*/
+    width: 100%; /* Käytä 100% näyttöleveydestä */
+    height: 100vh; /* Käytä 100% näyttökorkeudesta */
+    overflow: hidden;
+    color:white; /*fonttien väri*/
+    margin: 2%; /* Lisää marginaali ympärille */
+    width: 95%;
+}
+h1, h2{
+    font-size: 25pt;
+    margin-left:2%;  
+}
+h3{
+    font-size: 18pt;
+}
+p{
+    font-size: 13pt;
+    line-height: 1.5;
+}
+
+ul{ /*valikko asetukset */
+    width: 15%; /*leveys */
+    float:right; /* sijainti sivun oikeaan reunaan*/
+    margin: 0; /* Poista listan aiheuttamat marginaalit */
+    padding: 0; /* Poista listan aiheuttamat täyttö marginaalit */
+    overflow: hidden; /*piilota ylittävä sisältö*/
+    list-style-type: none; /*ei käytetä lista elementtejä esim. pallurat tai viivat*/
+  
+} 
+
+li button { /*valikon listan sisältö ul elementin sisällä*/
+    width: 100%; /* leveys ul valikon leveydestä 100%*/
+    background-color: transparent; /*tausta läpinäkyväksi */
+    text-align: center; /*tekstin sijainti */
+    color: white;  /*fontin väri */
+    font-size: 20pt; /*fontin koko */
+    padding: 10px 15px; /* sisätäyttö ylä/ala:10px, oikea/vasen:15px */
+    text-decoration: none; /* poista tekstin linkki koristelu */
+    border: 1px solid #5C7C89;
+    cursor: pointer;
+}
+li button:hover { /*aseta hover väri valikolle*/
+    background-color: #1F4959;
+    color: white;
+  }
+.kuvan-alue {
+    width: 20%; /* alueen leveys */
+    height:auto; /* pituus auto */
+    float:left; /* Sijainti */
+    max-width: 100%; /* Maksimi leveys */
+    margin-left:2%; /* vasen marginaali*/
+
+}
+
+.kuvan-alue img{ /* kuvan-alue divin kuvan asetukset */
+    width: 100%; /* leveys parent divin leveydestä 20% */
+    border: 1px solid #5C7C89;
+}
+
+.contact{
+    width: 25%; /* Voit säätää leveyttä tarpeesi mukaan */
+    background-color: transparent; /*tausta läpinäkyväksi */
+    border: 1px solid #5C7C89; 
+    text-decoration:none;
+    padding: 10px;
+    z-index: 999; /* Aseta korkea z-indeksi varmistaaksesi, että tämä on päällimmäisenä */
+    margin-left:2%;
+
+}
+.about{
+    width: 45%;
+    float:left;
+    margin-left: 10%;
+    height: auto;
+    padding: 2%;
+    border: 1px solid #5C7C89; 
+}
+#codesisältö, #designsisältö, #photosisältö{
+    width: 45%;
+    margin-left: 30%;
+    height: auto;
+    padding: 2%;
+    border: 1px solid #5C7C89; 
+    overflow: hidden; /*piilota ylittävä sisältö*/
+}
+#designsisältö img, #photosisältö img {
+    width: 40%;
+    height: auto;
+}
+#codesisältö img{
+    width: 60%;
+    height: auto;
+}
+#koodikenttä {
+    width: 80%;
+    height: 250px;
+    resize: none;
+    font-size: 9pt;
+    background-color: black;
+    color: white;
+    font-family: monospace;
+}
+.contact {
+    position: fixed;
+    bottom: 0;
+    width: 18%;
+    padding: 2%;
+    border: 1px solid #5C7C89;
+}
+
+
+/* asetukset pienemille näytöille */
+@media only screen and (max-width: 1000px) {
+    body {
+        background: linear-gradient( to bottom right, #011425, #242424); /* lineaarinen gradient taustaväri koko sivulle*/
+        width: 100%; /* Käytä 100% näyttöleveydestä */
+        height: 100%; /* Käytä 100% näyttökorkeudesta */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow:scroll;
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    .kuvan-alue {
+        width: 80%; /* alueen leveys */
+        margin-top: 2%;
+        margin-left: 0;
+        border: 1px solid #5C7C89;
+    }
+    .kuvan-alue img{ /* kuvan-alue divin kuvan asetukset */
+        width: 50%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        margin-left:25%;
+        margin-right:25%;
+        border:none; /* ei reunoja */
+        border-radius: 10%; /* 50%=Pyöreät reunat */
+    
+    }
+
+    ul{ /*valikko asetukset */
+        width: 80%; /*leveys */
+        
+    } 
+
+    li button { /*valikon listan sisältö ul elementin sisällä*/
+        font-size: 14pt;
+        
+    }
+    .about {
+        width: 80%;
+        height: auto;
+        margin-top: 2%;
+        margin-left: 0%;
+        padding: 2%;
+        border: 1px solid #5C7C89; /*reunojen väri ja koko*/ 
+    }
+    #codesisältö,#designsisältö, #photosisältö {
+        width: 80%;
+        height: auto;
+        margin-top: 2%;
+        margin-left: 0%;
+        padding: 2%;
+        border: 1px solid #5C7C89; 
+    }
+    #codesisältö img{
+        width: 100%;
+        height: auto;
+    }
+    #koodikenttä {
+        width: 100%;
+        height: 500px;
+        background-color: black;
+        color: white;
+    }
+    .contact{
+        float: left;
+        position:inherit;
+        width: 80%;
+        height: auto;
+        margin-top: 2%;
+        margin-left: 0%;
+        padding: 2%;
+        border: 1px solid #5C7C89; 
+    }
+    h1, h2{
+        
+        font-size: 25pt;
+        
+    }
+}
+ 

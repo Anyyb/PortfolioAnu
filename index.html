@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head> <!-- metatiedot ja ohjaavat elementit tulevat head osioon-->
+<meta charset="UTF-8"> <!--UTF-8 (Unicode Transformation Format - 8-bit). Eerikoismerkit ja symbolit, useasta kielestä.-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobiilinäkymän vievport -->
+<meta name="author" content="Anu Salminen"> <!-- Tekijän nimi -->
+<title>Portfolio</title> <!-- Sivun nimi -->
+<link rel="stylesheet" type=""text/css" href="index.css"> <!-- Ulkoisen tyylitiedoston linkki.-->
+
+</head>
+
+<body> <!-- Sivun sisältö  -->
+
+    <header class="otsikko">
+    <h1>Anu Salminen</h1>
+    <h2>Portfolio</h2>
+    </header>
+
+
+        <ul>
+            <li><button id="codebutton">Code</button></li>
+            <li><button id="designbutton">Design</button></li>
+            <li><button id="photobutton">Photo</button></li>
+            <li><button id="backbutton">&#127968;</button></li>
+        </ul>
+   
+        <div class="kuvan-alue">
+            <img src="Photo.png" alt="Omakuva">
+        </div>
+
+    <div class="about" id="about" style="display: block;">
+    <h3>About me</h3>
+    <p>Im a second year student at Turku University of Applied Sciences.<br>  
+     I'm studying Business IT (Bachelor of Business Administration IT). <br>
+     My specialization field is software development and information systems. </p>
+    </div>
+
+    <div id="codesisältö" style="display: none;">
+        <h3>Java</h3>
+        <p> Here is a short sample of my Java card game's code. The card game, compares <br> 
+            two different lists and then checks if you get the same or a bigger card than computer.</p>
+        <img src="Korttipeli.png" alt="CodePhoto">
+        <textarea id="koodikenttä" readonly>
+
+        package korttipeli;
+
+        /**
+        * Korttipeli, joka arpoo kortteja ja tarkistaa tuliko suurempi vai tasapeli. 
+        * Kirjoittaa tulokset voitoista ja tasapeleistä kahteen erilliseen tekstitiedostoon.
+        * Jos tiedostoissa on jo yli 100 riviä, tiedosto tyhjennetään ja tulokset kirjoitetaan
+        * alusta uudestaan. Pelissä on kolme nappulaa aloita peli, arvo kortti ja lopeta.
+        *
+        * @writer Anu Salminen
+        * @version 1.0
+        *
+        */
+
+            import java.io.File;
+            import java.io.FileNotFoundException;
+            import java.util.Scanner;
+
+            import javax.swing.JFrame;
+                public class Main {
+
+                public static void main(String[] args) {
+                    
+            /** 
+            *	Luodaan erillinen luokka isompikuin ja tallennetaan se isompikuin muuttujaan 
+            *   Säädetään Jframe ja ikkuna asetukset
+            *   Asetetaan isompikuin olio näkyväksi.
+            *   Asetetaan ikkuna näkyväksi.
+            */ 
+             
+                     Isompikuin isompikuin = new Isompikuin();
+            
+                
+                        JFrame window = new JFrame();
+                        window.setSize(960, 640);
+                        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        window.setResizable(false);
+                        window.setTitle("Korttipeli");
+                        window.add(isompikuin);
+                        window.setVisible(true);
+                        
+            /** 
+            *	Luetaan tiedostosta voitot rivien määrä.
+            *   virhe ilmoitus jos tiedostoa ei ole olemassa.
+            */ 		    
+                       
+                        try {
+                      
+                            String location = "tässä kohtaa on sijainti tiedostoon";
+                            // Yhdistetään hakemistopolku 
+                            File file = new File(location);
+                            
+                            Scanner lukija = new Scanner (file);
+                            
+                            
+                            String sisalto = lukija.next();
+                            
+                            
+                            System.out.println(sisalto + ' ' + lukija.next());    
+                            int sanat = 0;
+                            Isompikuin.rivit(lukija, sanat);
+                            lukija.close();
+                            } catch (FileNotFoundException e) {
+                            System.out.println("Tiedostoa ei löydy.");
+                } 	    
+                }
+                }
+        </textarea>
+    </div>
+
+    <div id="designsisältö" style="display: none;">
+        <h3>3D Modeling</h3>
+        <div class="gallery">
+            <img src="Donitsi2.png" alt="Donut" >
+            <img src="whale4.png" alt="Whale" >
+            <img src="Work in progress.jpg" alt="Tiefling">   
+          </div>
+    </div>
+    <div id="photosisältö" style="display: none;">
+        <div class="gallery">
+            <img src="Tanska.JPG" alt="Tanska" >
+            <img src="LittleMermaid.JPG" alt="Mermaid" >
+            <img src="Statue.JPG" alt="Statue">   
+          </div>
+       
+    </div>
+
+   
+    <div class="contact">
+        <footer>
+            <h3>Contact me</h3>
+            <p>0400973313</p>
+            <a href="anusalminen1@windowslive.com" style="color: white;">anusalminen1@windowslive.com</a></p>
+          </footer>
+    </div>
+    
+
+<script src="button.js"></script>
+</body>
+</html>
